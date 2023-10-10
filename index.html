@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+
+    }
+
+    .site-header {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(57deg, #01ba9e, #1e4d92);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+      
+
+    }
+
+    .navbar {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        position: fixed;
+        top: 0;
+    }
+
+    .logo {
+        width: 50%;
+        height: 100px;
+    }
+
+
+
+
+    .logo img {
+        margin-left: 25%;
+    }
+
+    .list {
+        width: 50%;
+        height: 100px;
+
+    }
+
+    .list ul {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .list ul li {
+        list-style: none;
+    }
+
+    .list ul li a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 17px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    .list ul li a.active {
+        color: rgb(218, 213, 213);
+
+    }
+
+   
+    
+
+    section {
+        display: flex;
+        justify-content: space-around;
+     
+
+    }
+
+    .left {
+        color: white;
+        margin: 15%;
+        width: 30%;
+        height: 200px;
+
+
+    }
+
+    .left h1::after {
+        content: " |";
+        position: absolute;
+        color: white;
+        animation: cursor 0.5s steps(15) infinite;
+    }
+
+    .left h1 {
+
+        animation: moving 3s alternate-reverse infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        font-size: 30px;
+       
+    }
+
+    .left p {
+        margin-top: 20px;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .left button{
+        font-size: 30px;
+        border-radius:10px ;
+        color:white;
+        background: linear-gradient(57deg, #01ba9e, #1e4d92);
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+    .left button:hover{
+        background: linear-gradient(57deg,#1e4d92,#01ba9e);
+        transition: all 3s ease; 
+    }
+
+    @keyframes moving {
+        0% {
+            width: 0ch;
+        }
+
+        90% {
+            width: 17ch;
+        }
+    }
+
+
+    @keyframes cursor {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+
+   
+
+    .right {
+        margin-top: 10%;
+    }
+
+    .openMenu {
+        font-size: 2rem;
+        margin: 20px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .closeMenu {
+        font-size: 2rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    @media(max-width:800px){
+        .list ul{
+   height:100vh;
+   position: fixed;
+   top:0;
+   right:0;
+   left:0;
+   z-index: 10;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center ;
+   transition: top 1s ease;
+   display: none;
+
+        }
+
+        .closeMenu{
+            display: block;
+            position: absolute;
+            top:20px;
+            right:20px;
+        }
+
+        .openMenu{
+            display: block ;
+            top:20px;
+            right: 20px;
+        }
+
+        .site-header{
+            width:100%;
+        }
+    }
+</style>
+
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    
+
+
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="" width="100px" hight="100px" />
+            </div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <div class="list">
+                
+                <ul class="mainMenu">
+                    <li><a href="#" class="active">About</a></li>
+                    <li><a href="skill.html">skills</a></li>
+                    <li><a href="project.html">project</a></li>
+                    <li><a href="resume.html">resume</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div class="left">
+                <h1>hello every one </h1>
+                <p>A passionate Full Stack web developer having an experience of building Web and mobile application
+                    with javascript/reactJS and some other cool libraries and frameworks.</p>
+                <button>Welcome</button>
+            </div>
+
+            <div class="right">
+                <img src="personal1.jpg" width="500px" height="500px">
+
+            </div>
+        </section>
+
+    </header>
+    
+        <script src="script.js"></script>
+</body>
+
+</html>
