@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            display: inline-flex;
+            width: 100%;
+            height: 150px;
+            background-color:black;
+            align-items: center;
+            padding-left: 450px;
+        }
+
+        .wrapper .icon {
+            position: relative;
+            background-color: #908f8f;
+            border-radius: 50%;
+            padding: 15px;
+            margin: 10px;
+            margin-top: 0px;
+            margin-left: 50px;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            justify-content: flex-end;
+            font-size: 18px;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            color: white;
+        }
+
+        .wrapper .tooltip {
+            position: absolute;
+            top: 0;
+            background-color: #fff;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .tooltip::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            bottom: -3px;
+            left: 42%;
+            transform: translate(-50%) rotate (45deg);
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .icon:hover .tooltip {
+            top: -40px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transition: all 0.3s;
+        }
+
+        .wrapper .facebook:hover {
+            background-color: #3b5999;
+            color: white;
+        }
+
+        .wrapper .facebook:hover .tooltip {
+            color: #3b5999;
+        }
+
+        .wrapper .twitter:hover {
+            background-color: #10a8a8;
+            color: white;
+        }
+
+        .wrapper .twitter:hover .tooltip {
+            color: #10a8a8;
+        }
+
+        .wrapper .github:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .wrapper .github:hover .tooltip {
+            color: black;
+        }
+
+        .wrapper .pinterest:hover {
+            background-color: #c71b1b;
+            color: white;
+        }
+
+        .wrapper .pinterest:hover .tooltip {
+            color: #c71b1b;
+        }
+
+        .wrapper .Youtube:hover {
+            background-color: #c71b1b;
+            color: white;
+        }
+
+        .wrapper .Youtube:hover .tooltip {
+            color: #c71b1b;
+        }
+
+        .foot {
+            display: inline-block;
+            color: white;
+            margin-top: 101px;
+            margin-left: -462px;
+            font-size: 20px;
+        }
+
+        .container{
+            background: linear-gradient(57deg, #01ba9e, #1e4d92);
+            width: 100%;
+            height:100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            align-items: center;
+        }
+
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #10a8a8;
+        }
+    </style>
+
+</head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.1/js/bootstrap.min.js " rel=" stylesheet">
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4//css/all.min.css" />
+
+<body> 
+<div class="container">
+    
+
+    <div style="color:white"><h1>You can contact here</h1>
+    </div>
+  
+            <div class="wrapper">
+                <div class="icon facebook">
+                    <div class="tooltip">Facebook</div>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </div>
+                <div class="icon twitter">
+                    <div class="tooltip">Twitter</div>
+                    <span><i class="fab fa-twitter"></i></span>
+                </div>
+                <div class="icon github">
+                    <div class="tooltip">Github</div>
+                    <span><i class="fab fa-github"></i></span>
+                </div>
+
+                <div class="icon pinterest">
+                    <div class="tooltip">Pinterest</div>
+                    <span><i class="fab fa-pinterest"></i></span>
+                </div>
+                <div class="foot">Copyright &copyright 2023.CodeSoft and technology pvt ltd. All rights
+                    reserved.</div>
+
+            </div>
+
+     
+     </div>
+
+</body>
+
+</html>
